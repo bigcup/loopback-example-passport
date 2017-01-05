@@ -4,11 +4,17 @@
   "base": "AccessToken",
   "properties": {},
   "validations": [],
+  "options": {
+      "idInjection": false,
+      "mysql": {
+          "table": "AccessToken"
+      }
+  },
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "user",
-      "foreignKey": "userId"
+      "model": "Staff",
+      "foreignKey": "staffId"
     }
   },
   "acls": [],

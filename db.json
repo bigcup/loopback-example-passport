@@ -1,0 +1,33 @@
+{
+  "ids": {
+    "user": 4,
+    "accessToken": 4,
+    "userCredential": 3,
+    "userIdentity": 2,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1
+  },
+  "models": {
+    "user": {
+      "1": "{\"username\":\"alexei\",\"password\":\"$2a$10$cCvVYLwK5PTCCEwZ4ucD2efZd5cn9BLwZfusQaTjF8Rw62U9eKpXe\",\"email\":\"alexei@ipublisher.com.ua\",\"id\":1}",
+      "2": "{\"username\":\"\",\"password\":\"$2a$10$vB6vaSo0itV5HUXz6zOH.etSmWdgaOiaTiQgxEFXMBZrxahjb01Q2\",\"email\":\"test@email.com\",\"id\":2}",
+      "3": "{\"username\":\"facebook.1226139754121359\",\"password\":\"$2a$10$LZ71ffavM1H2yXT2UZvj2u00eCwUUzL4/6p6wyS/l1.LN8Q0dwHii\",\"email\":\"1226139754121359@loopback.facebook.com\",\"id\":3}"
+    },
+    "accessToken": {
+      "w5D9suXRka5ytiXOREcnlVJGCgAesjFLCKPROEkAbE6fS3WP8f8jG2wqGI7n4Pon": "{\"id\":\"w5D9suXRka5ytiXOREcnlVJGCgAesjFLCKPROEkAbE6fS3WP8f8jG2wqGI7n4Pon\",\"ttl\":1209600,\"created\":\"2017-01-05T12:32:23.778Z\",\"userId\":3}",
+      "z4Rsyunff5165JYCxtPmmi19B31bLSAHW0Z0bXrgCs2iXoxquMLkt2st9NflBIsJ": "{\"id\":\"z4Rsyunff5165JYCxtPmmi19B31bLSAHW0Z0bXrgCs2iXoxquMLkt2st9NflBIsJ\",\"ttl\":1209600,\"created\":\"2017-01-05T12:40:29.845Z\",\"userId\":3}",
+      "TcOTOMEKbpNjvRfvSjB0HrpAR7IN916vuzAxYrxba3Bemp3XO3utCaKHRGJrwHSt": "{\"id\":\"TcOTOMEKbpNjvRfvSjB0HrpAR7IN916vuzAxYrxba3Bemp3XO3utCaKHRGJrwHSt\",\"ttl\":1209600,\"created\":\"2017-01-05T12:41:07.930Z\",\"userId\":3}"
+    },
+    "userCredential": {
+      "1": "{\"provider\":\"facebook\",\"authScheme\":\"oAuth 2.0\",\"externalId\":\"1226139754121359\",\"profile\":{\"id\":\"1226139754121359\",\"displayName\":\"Alexey Smirnov\",\"name\":{},\"provider\":\"facebook\",\"_raw\":\"{\\\"name\\\":\\\"Alexey Smirnov\\\",\\\"id\\\":\\\"1226139754121359\\\"}\",\"_json\":{\"name\":\"Alexey Smirnov\",\"id\":\"1226139754121359\"}},\"credentials\":{\"accessToken\":\"EAAKYMypL1T0BAP6xEUIWWt6m15ZCxKtdqZACH8fwZBAvKEcIkZAqqO6LYk4c6CMQCGO4VQx3kOKOYwxvksrg3KpgekxZBzONRsU2bz3i3bZALLAB7FZByNYqhcaGqPUCF7g4erBMou9auT4XizImLMd3yLBm96Vw19go1IrhJCMJQZDZD\"},\"created\":\"2017-01-05T11:30:35.033Z\",\"modified\":\"2017-01-05T11:30:35.033Z\",\"userId\":1,\"id\":1}",
+      "2": "{\"provider\":\"facebook\",\"authScheme\":\"oAuth 2.0\",\"externalId\":\"1226139754121359\",\"profile\":{\"id\":\"1226139754121359\",\"displayName\":\"Alexey Smirnov\",\"name\":{},\"provider\":\"facebook\",\"_raw\":\"{\\\"name\\\":\\\"Alexey Smirnov\\\",\\\"id\\\":\\\"1226139754121359\\\"}\",\"_json\":{\"name\":\"Alexey Smirnov\",\"id\":\"1226139754121359\"}},\"credentials\":{\"accessToken\":\"EAAKYMypL1T0BAJpKdfpzKC6ybPvqZCCUUSytGmgfg1nZAbM4374IsEer4ao7dIZAYv1R0ZCjclqhtPseZBZBGCkbDfqEzr0f7YrJ4LGgZCMzjs1WSLAapfC5hEhpsg6POlPhf1ZCExw9fiB8CzjdHFkSVEI4H8bWagVE7wLdYzwfNwZDZD\"},\"created\":\"2017-01-05T12:11:17.563Z\",\"modified\":\"2017-01-05T12:13:53.612Z\",\"userId\":2,\"id\":2}"
+    },
+    "userIdentity": {
+      "1": "{\"provider\":\"facebook\",\"authScheme\":\"oAuth 2.0\",\"externalId\":\"1226139754121359\",\"profile\":{\"id\":\"1226139754121359\",\"name\":{\"familyName\":\"Smirnov\",\"givenName\":\"Alexey\"},\"gender\":\"male\",\"profileUrl\":\"https://www.facebook.com/app_scoped_user_id/1226139754121359/\",\"emails\":[{\"value\":\"scr3am1@gmail.com\"}],\"provider\":\"facebook\",\"_raw\":\"{\\\"gender\\\":\\\"male\\\",\\\"link\\\":\\\"https:\\\\/\\\\/www.facebook.com\\\\/app_scoped_user_id\\\\/1226139754121359\\\\/\\\",\\\"locale\\\":\\\"ru_RU\\\",\\\"last_name\\\":\\\"Smirnov\\\",\\\"first_name\\\":\\\"Alexey\\\",\\\"timezone\\\":2,\\\"verified\\\":true,\\\"email\\\":\\\"scr3am1\\\\u0040gmail.com\\\",\\\"updated_time\\\":\\\"2016-01-17T22:56:15+0000\\\",\\\"id\\\":\\\"1226139754121359\\\"}\",\"_json\":{\"gender\":\"male\",\"link\":\"https://www.facebook.com/app_scoped_user_id/1226139754121359/\",\"locale\":\"ru_RU\",\"last_name\":\"Smirnov\",\"first_name\":\"Alexey\",\"timezone\":2,\"verified\":true,\"email\":\"scr3am1@gmail.com\",\"updated_time\":\"2016-01-17T22:56:15+0000\",\"id\":\"1226139754121359\"}},\"credentials\":{\"accessToken\":\"EAAKYMypL1T0BAMebpcD3v49ASspkHYpGZAsNEcVpK3jVyMbYjhHUowuPudQrTLyZChZBzTD1RLZBVaAO4K6Mj4ba7F6Ij9ZBex1bPPIaQIElPJqZBiSn2rB3L7KUpotNWy4QbSz3cfGlT7TQbxo8WRYSZCEYSTPXt54UIBIDJclbgZDZD\"},\"created\":\"2017-01-05T12:32:23.776Z\",\"modified\":\"2017-01-05T12:41:07.927Z\",\"userId\":3,\"id\":1}"
+    },
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {}
+  }
+}

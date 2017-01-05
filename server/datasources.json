@@ -1,6 +1,18 @@
 {
-  "db": {
-    "name": "db",
-    "connector": "memory"
-  }
+    "db": {
+        "host": "localhost",
+        "port": 3306,
+        "url": "",
+        "database": "passport",
+        "password": "q1w2e3",
+        "name": "db",
+        "user": "access_control",
+        "dateStrings": true,
+        "connector": "mysql"
+    },
+    "memory": {
+        "name": "memory",
+        "connector": "memory",
+        "file":"db.json"
+    }
 }

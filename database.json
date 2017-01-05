@@ -1,0 +1,11 @@
+{
+    "dev": {
+        "host": "localhost",
+        "password": "q1w2e3",
+        "user": "access_control",
+        "database": "passport",
+        "driver": "mysql",
+        "multipleStatements": true
+    },
+    "sql-file" : true
+}

@@ -2,13 +2,156 @@
   "name": "userIdentity",
   "plural": "userIdentities",
   "base": "UserIdentity",
-  "properties": {},
+  "properties": {
+      "id": {
+          "type": "Number",
+          "required": false,
+          "length": null,
+          "precision": 10,
+          "scale": 0,
+          "id": 1,
+          "mysql": {
+              "columnName": "id",
+              "dataType": "int",
+              "dataLength": null,
+              "dataPrecision": 10,
+              "dataScale": 0,
+              "nullable": "N"
+          }
+      },
+      "provider": {
+          "type": "String",
+          "required": false,
+          "length": 45,
+          "precision": null,
+          "scale": null,
+          "mysql": {
+              "columnName": "provider",
+              "dataType": "varchar",
+              "dataLength": 45,
+              "dataPrecision": null,
+              "dataScale": null,
+              "nullable": "Y"
+          }
+      },
+      "authScheme": {
+          "type": "String",
+          "required": false,
+          "length": 45,
+          "precision": null,
+          "scale": null,
+          "mysql": {
+              "columnName": "auth_scheme",
+              "dataType": "varchar",
+              "dataLength": 45,
+              "dataPrecision": null,
+              "dataScale": null,
+              "nullable": "Y"
+          }
+      },
+      "externalId": {
+          "type": "String",
+          "required": false,
+          "length": 45,
+          "precision": null,
+          "scale": null,
+          "mysql": {
+              "columnName": "external_id",
+              "dataType": "varchar",
+              "dataLength": 45,
+              "dataPrecision": null,
+              "dataScale": null,
+              "nullable": "Y"
+          }
+      },
+      "profile": {
+          "type": "Object",
+          "required": false,
+          "length": 65535,
+          "precision": null,
+          "scale": null,
+          "mysql": {
+              "columnName": "profile",
+              "dataType": "text",
+              "dataLength": 65535,
+              "dataPrecision": null,
+              "dataScale": null,
+              "nullable": "Y"
+          }
+      },
+      "credentials": {
+          "type": "Object",
+          "required": false,
+          "length": 65535,
+          "precision": null,
+          "scale": null,
+          "mysql": {
+              "columnName": "credentials",
+              "dataType": "text",
+              "dataLength": 65535,
+              "dataPrecision": null,
+              "dataScale": null,
+              "nullable": "Y"
+          }
+      },
+      "staffId": {
+          "type": "Number",
+          "required": false,
+          "length": null,
+          "precision": 10,
+          "scale": 0,
+          "mysql": {
+              "columnName": "user_id",
+              "dataType": "int",
+              "dataLength": null,
+              "dataPrecision": 10,
+              "dataScale": 0,
+              "nullable": "Y"
+          }
+      },
+      "created": {
+          "type": "Date",
+          "required": false,
+          "length": null,
+          "precision": null,
+          "scale": null,
+          "mysql": {
+              "columnName": "created",
+              "dataType": "datetime",
+              "dataLength": null,
+              "dataPrecision": null,
+              "dataScale": null,
+              "nullable": "Y"
+          }
+      },
+      "modified": {
+          "type": "Date",
+          "required": false,
+          "length": null,
+          "precision": null,
+          "scale": null,
+          "mysql": {
+              "columnName": "modified",
+              "dataType": "datetime",
+              "dataLength": null,
+              "dataPrecision": null,
+              "dataScale": null,
+              "nullable": "Y"
+          }
+      }
+  },
   "validations": [],
+  "options": {
+      "idInjection": false,
+      "mysql": {
+          "table": "user_identity"
+      }
+  },
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "user",
-      "foreignKey": "userId"
+      "model": "Staff",
+      "foreignKey": "staffId"
     }
   },
   "acls": [],

@@ -49,9 +49,6 @@ var path = require('path');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-// boot scripts mount components like REST API
-boot(app, __dirname);
-
 // to support JSON-encoded bodies
 app.middleware('parse', bodyParser.json());
 // to support URL-encoded bodies
@@ -75,16 +72,6 @@ passportConfigurator.init();
 // We need flash messages to see passport errors
 app.use(flash());
 
-passportConfigurator.setupModels({
-  userModel: app.models.user,
-  userIdentityModel: app.models.userIdentity,
-  userCredentialModel: app.models.userCredential,
-});
-for (var s in config) {
-  var c = config[s];
-  c.session = c.session !== false;
-  passportConfigurator.configureProvider(s, c);
-}
 var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 
 app.get('/', function(req, res, next) {
@@ -102,6 +89,7 @@ app.get('/auth/account', ensureLoggedIn('/login'), function(req, res, next) {
 });
 
 app.get('/local', function(req, res, next) {
+  console.log('req.user', req.user)
   res.render('pages/local', {
     user: req.user,
     url: req.url,
@@ -116,10 +104,11 @@ app.get('/signup', function(req, res, next) {
 });
 
 app.post('/signup', function(req, res, next) {
-  var User = app.models.user;
+  var User = app.models.Staff;
 
   var newUser = {};
   newUser.email = req.body.email.toLowerCase();
+  console.log('req.body', req.body)
   newUser.username = req.body.username.trim();
   newUser.password = req.body.password;
 
@@ -168,7 +157,22 @@ app.start = function() {
   });
 };
 
-// start the server if `$ node server.js`
-if (require.main === module) {
-  app.start();
-}
+boot(app, __dirname, function(err) {
+  if (err) throw err;
+  // start the server if `$ node server.js`
+  if (require.main === module) {
+    app.start();
+  }
+
+  passportConfigurator.setupModels({
+    userModel: app.models.Staff,
+    userIdentityModel: app.models.userIdentity,
+    userCredentialModel: app.models.userCredential,
+  });
+
+  for (var s in config) {
+    var c = config[s];
+    c.session = c.session !== false;
+    passportConfigurator.configureProvider(s, c);
+  }
+});

@@ -1,0 +1,248 @@
+{
+    "name": "Staff",
+    "base": "User",
+    "options": {
+        "idInjection": false,
+        "mysql": {
+            "table": "Staff"
+        },
+        "relations": {
+          "roles": {
+            "type": "hasMany",
+            "model": "Role",
+            "through": "RoleMapping",
+            "foreignKey": "principalId",
+            "keyThrough": "roleId"
+          },
+          "accessTokens": {
+            "type": "hasMany",
+            "model": "accessToken",
+            "foreignKey": "staffId"
+          },
+          "identities": {
+            "type": "hasMany",
+            "model": "userIdentity",
+            "foreignKey": "staffId"
+          },
+          "credentials": {
+            "type": "hasMany",
+            "model": "userCredential",
+            "foreignKey": "staffId"
+          }
+        },
+        "acls": []
+    },
+    "properties": {
+        "id": {
+            "type": "Number",
+            "required": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "id": 1,
+            "mysql": {
+                "columnName": "id",
+                "dataType": "int",
+                "dataLength": null,
+                "dataPrecision": 10,
+                "dataScale": 0,
+                "nullable": "N"
+            }
+        },
+        "name": {
+            "type": "String",
+            "required": false,
+            "length": 512,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "name",
+                "dataType": "varchar",
+                "dataLength": 512,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "phone": {
+            "type": "String",
+            "required": false,
+            "length": 512,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "phone",
+                "dataType": "varchar",
+                "dataLength": 512,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "desc": {
+            "type": "String",
+            "required": false,
+            "length": 65535,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "desc",
+                "dataType": "text",
+                "dataLength": 65535,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "realm": {
+            "type": "String",
+            "required": false,
+            "length": 512,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "realm",
+                "dataType": "varchar",
+                "dataLength": 512,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "username": {
+            "type": "String",
+            "required": false,
+            "length": 512,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "username",
+                "dataType": "varchar",
+                "dataLength": 512,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "password": {
+            "type": "String",
+            "required": false,
+            "length": 512,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "password",
+                "dataType": "varchar",
+                "dataLength": 512,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "credentials": {
+            "type": "String",
+            "required": false,
+            "length": 65535,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "credentials",
+                "dataType": "text",
+                "dataLength": 65535,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "challenges": {
+            "type": "String",
+            "required": false,
+            "length": 65535,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "challenges",
+                "dataType": "text",
+                "dataLength": 65535,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "email": {
+            "type": "String",
+            "required": false,
+            "length": 512,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "email",
+                "dataType": "varchar",
+                "dataLength": 512,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "verificationtoken": {
+            "type": "String",
+            "required": false,
+            "length": 512,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "verificationToken",
+                "dataType": "varchar",
+                "dataLength": 512,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "status": {
+            "type": "String",
+            "required": false,
+            "length": 512,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "status",
+                "dataType": "varchar",
+                "dataLength": 512,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "created": {
+            "type": "Date",
+            "required": false,
+            "length": null,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "created",
+                "dataType": "datetime",
+                "dataLength": null,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "personId": {
+            "type": "Number",
+            "required": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "mysql": {
+                "columnName": "person_id",
+                "dataType": "int",
+                "dataLength": null,
+                "dataPrecision": 10,
+                "dataScale": 0,
+                "nullable": "Y"
+            }
+        }
+    }
+}

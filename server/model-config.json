@@ -6,7 +6,19 @@
       "./node_modules/loopback-component-passport/lib/models"
     ]
   },
-  "user": {
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Staff": {
     "dataSource": "db",
     "public": true
   },
@@ -19,18 +31,6 @@
     "public": false
   },
   "userIdentity": {
-    "dataSource": "db",
-    "public": false
-  },
-  "ACL": {
-    "dataSource": "db",
-    "public": false
-  },
-  "RoleMapping": {
-    "dataSource": "db",
-    "public": false
-  },
-  "Role": {
     "dataSource": "db",
     "public": false
   }

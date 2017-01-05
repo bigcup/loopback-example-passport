@@ -8,6 +8,7 @@
     "posttest": "npm run lint"
   },
   "dependencies": {
+    "activedirectory": "^0.7.2",
     "body-parser": "^1.9.0",
     "compression": "^1.0.11",
     "connect-ensure-login": "^0.1.1",
@@ -18,7 +19,9 @@
     "jade": "^1.7.0",
     "loopback": "^3.0.0",
     "loopback-boot": "^2.0.0",
+    "loopback-component-explorer": "^2.1.0",
     "loopback-component-passport": "^2.2.0",
+    "loopback-connector-mysql": "git://github.com/iPublisher/loopback-connector-mysql.git",
     "passport": "^0.2.0",
     "passport-facebook": "^1.0.3",
     "passport-google-oauth": "^0.1.5",
@@ -26,11 +29,10 @@
     "passport-oauth2": "^1.1.2",
     "passport-twitter": "^1.0.2",
     "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^1.1.0",
-    "loopback-component-explorer": "^2.1.0"
+    "strong-error-handler": "^1.1.0"
   },
   "devDependencies": {
-    "eslint": "^2.5.3",
+    "eslint": "^3",
     "eslint-config-loopback": "^4.0.0"
   },
   "repository": {
