@@ -6,6 +6,14 @@
       "./node_modules/loopback-component-passport/lib/models"
     ]
   },
+  "accessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
   "ACL": {
     "dataSource": "db",
     "public": false
@@ -21,10 +29,6 @@
   "Staff": {
     "dataSource": "db",
     "public": true
-  },
-  "accessToken": {
-    "dataSource": "db",
-    "public": false
   },
   "userCredential": {
     "dataSource": "db",

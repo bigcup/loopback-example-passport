@@ -14,7 +14,7 @@
     "user": {
       "type": "belongsTo",
       "model": "Staff",
-      "foreignKey": "staffId"
+      "foreignKey": "userId"
     }
   },
   "acls": [],

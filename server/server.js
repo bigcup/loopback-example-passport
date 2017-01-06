@@ -56,16 +56,15 @@ app.middleware('parse', bodyParser.urlencoded({
   extended: true,
 }));
 
-// The access token is only available after boot
-app.middleware('auth', loopback.token({
-  model: app.models.accessToken,
-}));
-
-app.middleware('session:before', cookieParser(app.get('cookieSecret')));
+app.middleware('session:before', cookieParser('privet'));
 app.middleware('session', session({
   secret: 'kitty',
   saveUninitialized: true,
   resave: true,
+}));
+// The access token is only available after boot
+app.middleware('auth', loopback.token({
+  model: app.models.accessToken,
 }));
 passportConfigurator.init();
 
